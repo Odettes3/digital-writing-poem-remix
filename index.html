@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <!-- custom font -->
+    <!-- custom font --> 
     <link
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap"
       rel="stylesheet"
@@ -41,9 +41,10 @@
     <div id="poem"></div>
     <script>
       // set up the lists of words
-      const subjects = "you,I,we,they".split(","),
-        verbs = "run,walk,speak,drift,talk,whisper".split(","),
-        objects = "me,you,her,him,them".split(",");
+      const subjects = "monsters,vampires,robots,zombies".split(","),
+        verbs = "save,destroy,explode,invade,hide,evaporate".split(","),
+        small_words = "the,a".split(","),
+        objects = "city,world,house,table,fishtank".split(",");
       // set up the counter
       let counter = 0;
 
@@ -63,8 +64,10 @@
           getRandomFromList(subjects) +
           " " +
           getRandomFromList(verbs) +
-          " to " +
+          " the " +
           getRandomFromList(objects);
+          " "
+         getRandomFromList(small_words);
         const lineText = document.createTextNode(text);
         line.appendChild(lineText);
         // get the poem
@@ -87,7 +90,7 @@
         counter++;
         if (counter % 5 === 0) {
           addBlankLine();
-        } else if (counter % 5 === 2 || counter % 5 === 4) {
+        } else if (counter % 5 === 2|| counter % 8 === 4) {
           // if the second or fourth line add the line with an indent
           addLine(true);
         } else {
