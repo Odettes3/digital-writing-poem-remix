@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <!-- custom font --> 
+    <!-- custom font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap"
       rel="stylesheet"
-    /> -- custom font ends here -->
+    />
 
     <title>Monsters vs the World</title>
 
     <!-- styles -->
     <style>
       body {
-        font-family: "Dosis", sans-serif;
+        font-family: "Lemonada", cursive;
         margin: 2em;
         background-color: #066;
         color: #FFF;
@@ -66,8 +67,8 @@
           getRandomFromList(verbs) +
           " the " +
           getRandomFromList(objects);
-          " "
-         getRandomFromList(small_words);
+        (" ");
+        getRandomFromList(small_words);
         const lineText = document.createTextNode(text);
         line.appendChild(lineText);
         // get the poem
@@ -90,7 +91,7 @@
         counter++;
         if (counter % 5 === 0) {
           addBlankLine();
-        } else if (counter % 5 === 2|| counter % 5 === 4) {
+        } else if (counter % 5 === 2 || counter % 5 === 4) {
           // if the second or fourth line add the line with an indent
           addLine(true);
         } else {
