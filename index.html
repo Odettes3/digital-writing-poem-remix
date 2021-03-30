@@ -13,8 +13,6 @@
     />
     <!-- custom font ends here -->
 
-    <title>Monsters vs the World</title>
-
     <!-- styles -->
     <style>
       body {
@@ -39,14 +37,16 @@
     </style>
   </head>
   <body>
-    <h1>Monsters vs the World</h1>
+    <h1>Teddy Bear Picnic</h1>
     <div id="poem"></div>
     <script>
       // set up the lists of words
-      const subjects = "monsters,vampires,robots,zombies".split(","),
-        verbs = "save,destroy,explode,invade,hide,evaporate".split(","),
-        small_words = "the,a".split(","),
-        objects = "city,world,house,table,fishtank".split(",");
+      const subjects = "pies,lemon tarts,raspberry souflè,cinnamon scroll".split(
+          ","
+        ),
+        verbs = "save,destroy,explode,invade,evaporate".split(","),
+        small_words = "in my,".split(","),
+        objects = "mouth,tastebuds,life,tummy".split(",");
       // set up the counter
       let counter = 0;
 
@@ -66,7 +66,7 @@
           getRandomFromList(subjects) +
           " " +
           getRandomFromList(verbs) +
-          " the " +
+          " my " +
           getRandomFromList(objects);
         (" ");
         getRandomFromList(small_words);
